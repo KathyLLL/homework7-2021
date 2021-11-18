@@ -1,4 +1,4 @@
-var video;
+var video = document.querySelector("#player1");
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
@@ -47,15 +47,18 @@ document.querySelector("#skip").addEventListener("click", function() {
 
 //6. Mute Video
 document.querySelector("#mute").addEventListener("click", function() {
-	if (video.muted= true) {
-		console.log("Unmute Video");
+	console.log(video.muted);
+	if (video.muted == true) {
+		console.log("Mute Video");
+		video.muted = true;
 		document.querySelector("#mute").innerHTML = "Mute";
 	}
-	if (video.muted= false) {
+	else {
 		console.log("Mute Video");
+		video.muted = false;
 		document.querySelector("#mute").innerHTML = "Unmute";
 	}
-	});
+});
 
 //7. Volume Slider
 document.querySelector("#slider").addEventListener("change", function() {
@@ -71,7 +74,7 @@ document.querySelector("#slider").addEventListener("change", function() {
 	});
 	
 	//9. Oringinal	
-	ddocument.querySelector("#orig").addEventListener("click", function() {
+	document.querySelector("#orig").addEventListener("click", function() {
 	console.log("Remove Oldschool");
 	document.querySelector("#player1").classList.remove("oldSchool");
 	});
