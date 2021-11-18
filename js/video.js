@@ -51,12 +51,12 @@ document.querySelector("#mute").addEventListener("click", function() {
 	if (video.muted == false) {
 		console.log("Mute Video");
 		video.muted = true;
-		document.querySelector("#mute").innerHTML = "UnMute";
+		document.querySelector("#mute").innerHTML = "Mute";
 	}
 	else {
 		console.log("Unmute Video");
 		video.muted = false;
-		document.querySelector("#mute").innerHTML = "Mute";
+		document.querySelector("#mute").innerHTML = "UnMute";
 	}
 });
 
